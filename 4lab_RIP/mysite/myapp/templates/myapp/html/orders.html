@@ -1,0 +1,14 @@
+{% extends 'myapp/html/home.html' %}
+
+{% block title %}Заказы{% endblock %}
+
+
+{% block body %}
+    <ul>
+        {% for order in orders %}
+            {% include 'myapp/html/order_element.html' with element=order %}
+        {% empty %}
+            <li>Пустой список</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

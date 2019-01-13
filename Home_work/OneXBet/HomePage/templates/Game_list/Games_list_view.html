@@ -1,0 +1,20 @@
+{% extends 'Base_page.html' %}
+{% load static %}
+{% block title %} Ставки {% endblock %}
+
+{% block content %}
+    <div class = game_list_page>
+        <div class = enu_bar>
+
+        </div>
+        <div class = game_list>
+            <ul>
+                {% for game in games %}
+                    {% include 'game_list/game_element.html' with element=game %}
+                {% empty %}
+                    <li>Нет активных игр</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

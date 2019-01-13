@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        Заголовок
+        {% endblock %}
+    </title>
+
+    {% block extrascripts %} {% endblock %}
+    {% block extrastyles %} {% endblock %}
+</head>
+<body>
+<div>
+    {% block content %}
+        Тело страницы
+    {% endblock %}
+</div>
+</body>
+</html>
